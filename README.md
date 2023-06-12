@@ -1,24 +1,31 @@
-# README
+# Apartment App Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Vocab
+- Devise: Ruby gem that provide authorization and authenication to an application
+- authentication: indentification of a valid user
+- authorization: the functionality that a user can perform on an application or data that a user has access to 
+- user session: is created to track the status of the user
 
-Things you may want to cover:
+JSON Web Token
+localStorage
 
-* Ruby version
+## Adding devise dependency
+$ bundle add devise
+$ rails generate devise:install
+$ rails generate devise User
+$ rails db:migrate
 
-* System dependencies
+## JSON Web Tokens/CORS
+- Add gems
+- Create CORS file and add the authorization code
 
-* Configuration
+## Apartment resource
+- Use can have many apartments. Apartments will belong to a user.
+- $ rails g resource Apartment street:string unit:string city:string state:string square_footage:integer price:string bedrooms:integer bathrooms:float pets:string image:text user_id:integer
+- $ rails routes -E
 
-* Database creation
+## Seeds
 
-* Database initialization
+## Devise Configuration
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Devise Controllers
