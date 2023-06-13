@@ -200,7 +200,7 @@ spec/requests/apartments_spec.rb
       # make a request to the application to create the object we made
       post '/apartments', params: apt_params
 
-      # 
+      # The API returns data in the response body. The response body data is structured as JSON. We will parse the response.body 
       apartment = JSON.parse(response.body)
 
       # assert that the response is correct
