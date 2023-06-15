@@ -19,7 +19,7 @@ hi_apartments = [
     bedrooms:1,
     bathrooms:1.5, 
     pets:'no',
-    image: 'not@apartment.com'
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YnVuZ2Fsb3d8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
   },{
     street: '123 Road',
     unit: '4D', 
@@ -30,7 +30,7 @@ hi_apartments = [
     bedrooms:1,
     bathrooms:0, 
     pets:'yes',
-    image: 'not@apartment.com'
+    image: 'https://images.unsplash.com/photo-1602002418209-55d7a55adf42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1bmdhbG93fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
   }
 ]
 
@@ -45,7 +45,7 @@ co_apartments = [
     bedrooms:2,
     bathrooms:2, 
     pets:'yes',
-    image: 'not@apartment.com'
+    image: 'https://images.unsplash.com/photo-1540468348633-084ed9d348f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJ1bmdhbG93fGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
   }
 ]
 
