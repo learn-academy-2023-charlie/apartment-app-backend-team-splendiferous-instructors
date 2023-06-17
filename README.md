@@ -25,6 +25,12 @@ $ rails db:migrate
 - Add devise-jwt and rack-cors gems to Gemfile
 - To bring in required dependencies: $ bundle
 - Create CORS file and add the authorization code that will allow other applications to request data and will allow the JWT authorization to get passed
+- disable the token on application controller
+```js
+  class ApplicationController < ActionController::Base
+    skip_before_action :verify_authenticity_token
+  end
+```
 
 ## Apartment resource
 - Use can have many apartments. Apartments will belong to a user.
@@ -67,6 +73,7 @@ Since JWT are created when a user is authorized during sign in/sign up and revok
 - modify the User model to reflect the revocation strategy
 
 ## API Endpoints and Validations
+- Reference for API endpoints: https://github.com/learn-academy-2023-charlie/syllabus/blob/main/rails/rails-api.md
 ### index
 - Stub out endpoints in app/controllers/apartments_controller.rb
 ```rb
@@ -207,7 +214,7 @@ spec/requests/apartments_spec.rb
         # status code
       expect(response).to have_http_status(200)
         # error message
-      expect(apartment.first['street']).to include("can't be blank")
+      expect(apartment['street']).to include("can't be blank")
     end
   end
 ``` 
@@ -226,8 +233,11 @@ spec/requests/apartments_spec.rb
 
   private
   def apartment_params
-    params.require(:apartment).permit(:street, :city, :state, :manager, :email, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
+    params.require(:apartment).permit(:street, :unit, :city, :state, :square_footage, :price, :bedrooms, :bathrooms, :pets, :image, :user_id)
   end
 ```
 - See it pass 
 - $ `rspec spec/requests/apartments_spec.rb`
+
+- Reference for delete assertion
+https://stackoverflow.com/questions/4803469/how-can-i-assert-that-no-route-matches-in-a-rails-integration-test
