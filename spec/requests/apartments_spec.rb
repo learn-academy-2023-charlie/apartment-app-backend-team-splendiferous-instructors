@@ -136,20 +136,19 @@ RSpec.describe "Apartments", type: :request do
       apt = Apartment.first
       
       # make a request to the application to delete the apartment without an id params
-      delete '/apartments'
+        delete '/apartments'
 
-      # parse routing error 
+      # catch the ActionController::RoutingError exception
       rescue ActionController::RoutingError => error
-      # assertion the error
+
+      # assertion on the error meesage
       expect(error.message).to include "No route matches"
 
-      # The API returns data in the response body. The response body data is structured as JSON. We will parse the response.body 
-      message = JSON.parse(response.body)
       # assert that the response is correct because the apartment was not destroyed
         # status code
       expect(response).to have_http_status(200)
         # error message
-      expect(apartment['street']).to include('124 Conch St')
+      expect(apt['street']).to include('124 Conch St')
     end
   end
 
