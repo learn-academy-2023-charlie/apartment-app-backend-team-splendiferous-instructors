@@ -13,10 +13,10 @@ Create API to maintain a collection of apartments for the frontend to make reque
 - Follow [Process Notes](https://github.com/learn-academy-2023-charlie/syllabus/blob/main/apartment-app/backend/devise.md) in syllabus
 - Provide authentication and authorization using devise and jwt
 ### Vocab
-- [Devise](https://rubydoc.info/github/heartcombo/devise): Ruby gem that provide authorization and authenication to an application
-- authentication: indentification of a valid user
+- [Devise](https://rubydoc.info/github/heartcombo/devise): Ruby gem that provide authorization and authentication to an application
+- authentication: identification of a valid user
 - authorization: the functionality that a user can perform on an application or data that a user has access to 
-- user session: is created to track the status of the user
+- user session: created to track the status of the user
 - [JSON Web Token (JWT)](https://blog.logrocket.com/secure-rest-api-jwt-authentication/): provides secure transmission of data that identifies a user
 - localStorage: method that gives API calls access to the JWT
 
