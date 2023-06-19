@@ -1,7 +1,8 @@
 # Apartment App Backend
 ## Overview of Project with Devise and JWT
 - References
-[Token Based Authentication](https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide)
+[Token Based Authentication](https://dzone.com/articles/cookies-vs-tokens-the-definitive-guide)  
+[Rails API](https://github.com/learn-academy-2023-charlie/syllabus/blob/main/rails/rails-api.md)
 
 ## Process
 ## GitHub Class Repo
