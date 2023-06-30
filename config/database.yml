@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: apartment_app_backend_production
-  username: apartment_app_backend
-  password: <%= ENV["APARTMENT_APP_BACKEND_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
