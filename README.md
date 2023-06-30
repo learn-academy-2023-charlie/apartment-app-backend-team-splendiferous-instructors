@@ -99,3 +99,5 @@ Since JWT are created when a user is authorized during sign in/sign up and revok
 - update the schema
 - modify the User model to reflect the revocation strategy
 
+## Additional render steps
+- After the initial deployment is complete remove the bundle exec rake db:seed from this set of commands.
